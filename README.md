@@ -5,4 +5,4 @@ currently trying to write some Data Structures and Randomized Algoithms, and pro
 
 ### stuff already done:  
 ### Data Structure:  
-Disjoint set          DSU.cpp  
+- Disjoint set : DSU.cpp  
