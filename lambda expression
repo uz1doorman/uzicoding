@@ -1,0 +1,12 @@
+#include <algorithm>
+#include <numeric> //for gcd
+
+using namespace std;
+
+//[capture list](parameter list) -> return type { function body }
+
+auto func1 = [](int x, int y) {return max(x, y);};
+
+auto func2 = [](int x, int y) {return min(x, y);};
+
+auto func3 = [](int x, int y) {return gcd(x, y);};
