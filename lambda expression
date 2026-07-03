@@ -1,5 +1,5 @@
 #include <algorithm>
-#include <numeric>
+#include <numeric> //for gcd
 
 using namespace std;
 
