@@ -1,0 +1,53 @@
+# Notes about lvalue and rvalue
+
+## lvalue
+Definition: A value that has a name, whose address can be taken, and which persists after the expression ends.
+Examples:
+```c++
+int a = 10; //a is an lvalue
+int b = a + 1; //b is an lvalue
+int* p = &a; //valid, a is an lvalue
+```
+
+
+## rvalue
+Definition: A value that lacks a persistent identity and is typically temporary.
+Examples:
+```c++
+int a = 10; //10 is an rvalue
+int b = a + 1; //a + 1 is an rvalue
+// int* p2 = &(a + 1); //invalid, a + 1 is an rvalue
+```
+
+## reference
+
+### Lvalue reference *T&*
+Definition: *T&* can only bind to an lvalue; it cannot directly bind to an rvalue.
+Examples:
+```c++
+int a = 5;
+int& r1 = a;      // valid, a is an lvalue
+// int& r2 = 10;  // invalid, 10 is an rvalue(Literal)
+// int& r3 = a + 1; // invalid, a + 1 is an rvalue
+```
+
+### Const lvalue reference *const T&*
+Definition: *const T&* can bind to both lvalues ​​and rvalues.
+Examples:
+```c++
+int a = 5;
+const int& r1 = a;     // valid, a is an lvalue
+const int& r2 = 10;    // valid, 10 is an rvalue(Literal)
+const int& r3 = a + 1; // valid, a + 1 is an rvalue
+```
+
+### Rvalue reference *T&&*
+Definition: *T&&* can only bind to rvalues; it cannot directly bind to a lvalue.
+Examples:
+```c++
+int a = 5;
+int&& r1 = 10;        // valid
+int&& r2 = a + 1;     // valid
+// int&& r3 = a;      // invalid，a is an lvalue
+int&& r4 = std::move(a); // valid, std::move converts an lvalue to an rvalue
+```
