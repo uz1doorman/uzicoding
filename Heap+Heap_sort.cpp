@@ -1,4 +1,4 @@
-//1-indexed
+//1-indexed, max-heap
 void Max_Heapify (vector<int> & A, int index) {
     int i = 2*index;
     int j = 2*index + 1;
@@ -17,13 +17,14 @@ void Max_Heapify (vector<int> & A, int index) {
     }
 }
 
-//Build a heap from an existing array.
+//Build a max-heap from an existing array.
 void build_max_heap(vector<int> & A) {
     for (int i = A.size()/2; i >= 1; --i) {
         Max_Heapify(A, i);
     }
 }
 
+//sort an existing array in a decreasing order.
 void heap_sort(vector<int> &A) {
     int n = A.size() - 1;
     vector<int> B;
