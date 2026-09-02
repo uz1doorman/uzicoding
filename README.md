@@ -7,7 +7,8 @@ currently trying to write some Data Structures and Randomized Algoithms, and pro
 - Disjoint set : DSU.cpp  
 - Sparse Table : Sparse_Table.cpp  
 - Heap : Heap+Heap_sort.cpp  
-- Linked List : Linked_list.cpp  
+- Linked List : Linked_list.cpp
+- AVL Nodes : AVL.py  
 
 ### Algorithms:
 - Heap sort : Heap+Heap_sort.cpp
